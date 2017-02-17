@@ -1,8 +1,7 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 157059515 -- Put Here Your ID
---ایدی خودتونو اینجا بزارید
+our_id = 265228002
 URL = require "socket.url"
 http = require "socket.http"
 https = require "ssl.https"
@@ -77,21 +76,10 @@ end
 function create_self( )
   self = {
     names = {
-    "solid",
-    "سلید",
-    "سولید",
-    "سعید",
-    "saeed",
-    "saeid"
+    "none",
     },
     answers = {
-    "وات؟ :/",
-    "بلی؟",
-    "بفرما",
-    "بوگوی :|",
-    "جونم؟",
-    "جونز",
-    "ژون؟ :/"
+    "han :|",
     },
 }
   serialize_to_file(self, './data/self.lua')
@@ -132,28 +120,7 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》Beyond Self Bot V2
-An fun bot based on BDReborn
-
-》https://github.com/BeyondTeam/Self-BotV2 
-
-》Admins :
-》@SoLiD ➣ Founder & Developer《
-》@Makan ➣ Developer《
-》@CiveY ➣ Developeer《
-》@MrPars ➣ Manager《
-
-》Special thanks to :
-》@Vysheng
-》@MrHalix
-》And Beyond Team Members
-
-》Our channel :
-》@BeyondTeam《
-
-》Our website :
-》http://BeyondTeam.ir
-]],
+    info_text = [[]],
   }
   serialize_to_file(config, './data/config.lua')
   print ('saved config into conf.lua')
